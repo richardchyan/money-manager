@@ -8,12 +8,10 @@ const TransactionsList = ({ transactions }) => {
    
    console.log(response);
 
-
-
    return (
       <div className="">
          {transactions.map(transaction => (
-            <li key={transaction.id} className="border-l-4 border-green-600 border-y-2 shadow-lg mb-4 list-none flex justify-between py-4 px-8 bg-green-50 relative">
+            <li key={transaction.id} className="border-l-4 border-green-600 shadow-lg mb-4 list-none flex justify-between py-4 px-8 bg-green-50 relative">
                <p className="text-2xl">{transaction.name}</p>
                <p className="text-3xl">${transaction.amount}</p>
                <button onClick={() => deleteDocument(transaction.id)} className="text-md absolute top-1 right-1">

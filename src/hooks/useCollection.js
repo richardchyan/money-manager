@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { db } from '../firebase/config';
 
 
-// think of this as a "GET" hook for each collection that you are calling. This is why using the onsnapshot is used instead of a regular get, because it is real-time by default
+// use this as a "GET" hook for each collection being called. This is why using the onsnapshot is used instead of a regular get, because it is real-time by default
 const useCollection = (collection, _query, _orderBy) => {
 
    const [documents, setDocuments] = useState(null);
