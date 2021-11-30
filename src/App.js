@@ -14,21 +14,21 @@ function App() {
     <div className="App">
       { authIsReady && (
         <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            {!user && <Redirect to="/login" />}
-            {user && <Home/>}
-          </Route>
-          <Route path="/login">
-            {user && <Redirect to="/" />}
-            {!user && <Login/> }
-          </Route>
-          <Route path="/signup">
-            {user && <Redirect to="/" />}
-            {!user && <Signup/>}
-          </Route>
-        </Switch>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              {!user && <Redirect to="/login" />}
+              {user && <Home/>}
+            </Route>
+            <Route path="/login">
+              {user && <Redirect to="/" />}
+              {!user && <Login/> }
+            </Route>
+            <Route path="/signup">
+              {user && <Redirect to="/" />}
+              {!user && <Signup/>}
+            </Route>
+          </Switch>
        </Router>
       )}
     </div>
